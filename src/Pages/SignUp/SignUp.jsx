@@ -1,10 +1,16 @@
 import { NavLink } from "react-router-dom";
 
-const SignIn = () => {
+
+const SignUp = () => {
     return (
         <div className="w-full max-w-md p-8 space-y-3 rounded-xl dark:bg-gray-900 dark:text-gray-100 mx-auto my-10 ">
-            <h1 className="text-2xl font-bold text-center">Sign In</h1>
+            <h1 className="text-2xl font-bold text-center">Sign Up</h1>
             <form novalidate="" action="" className="space-y-6">
+                {/* name */}
+                <div className="space-y-1 text-sm">
+                    <label for="full name" className="block dark:text-gray-400">Full Name</label>
+                    <input type="text" name="full name" id="full name" placeholder="enter name" className="w-full px-4 py-3 rounded-md dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100 focus:dark:border-violet-400" />
+                </div>
                 {/* email */}
                 <div className="space-y-1 text-sm">
                     <label for="email" className="block dark:text-gray-400">Email</label>
@@ -43,12 +49,11 @@ const SignIn = () => {
                 </button>
             </div>
             <p className="text-xs text-center sm:px-6 dark:text-gray-400">Don't have an account?
-                <NavLink to={"/signup"} className="ml-3 text-violet-400 hover:underline">Sign up</NavLink>
-
-
+                <NavLink to={"/signin"} className="ml-3 text-violet-400 hover:underline">Sign In</NavLink>
+                {/* <a rel="noopener noreferrer" href="#" className="underline dark:text-gray-100">Sign up</a> */}
             </p>
         </div>
     );
 };
 
-export default SignIn;
+export default SignUp;
